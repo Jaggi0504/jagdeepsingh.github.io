@@ -1,0 +1,775 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Jagdeep Singh Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+	<style>
+		/* Flex container to hold the chart and labels side by side */
+		.chart-container {
+			display: flex;
+			justify-content: center; /* Centers horizontally */
+			align-items: center;     /* Aligns vertically */
+		}
+	
+		.time-allocation-chart {
+			width: 300px;
+			height: 400px;
+		}
+	
+		/* Style for chart legend to position on the side */
+		.chart-legend {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			margin-left: 20px; /* Adds space between the chart and the legend */
+		}
+	
+		.chart-legend-item {
+			display: flex;
+			align-items: center;
+			margin-bottom: 10px; /* Spacing between items */
+		}
+	
+		/* Square color box for each label */
+		.color-box {
+			width: 20px;
+			height: 20px;
+			margin-right: 10px;
+		}
+	
+		/* Style for the text of the legend */
+		.legend-text {
+			color: white;
+			/* font-weight: bold; */
+		}
+		
+		.chart-container {
+			position: relative;
+    width: 100%; /* Full width */
+    height: 400px; /* Fixed height to maintain aspect ratio */
+    margin: 0 auto; /* Center the chart horizontally */
+		}
+
+		.kpi-dashboard {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap; /* Allows wrapping of items */
+    text-align: center;
+    margin-bottom: 20px;
+	}
+
+	.kpi {
+		background-color: #f9c74f;
+		padding: 20px;
+		border-radius: 20px;
+		flex: 1 1 200px; /* Allow flexible size with a minimum width */
+		margin: 10px;
+		min-width: 150px; /* Minimum width for small screens */
+	}
+
+	.chart-container {
+		width: 100%;
+		max-width: 800px; /* Set a maximum width for the chart */
+		margin: 0 auto; /* Center the chart horizontally */
+	}
+	</style>
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Jagdeep Singh</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Experience</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/JagdeepImage.jpg);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hi there!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Jagdeep Singh</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Data-driven  ',
+						'Analytical-mindset  ',
+						'Passionate   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <!-- <h2>A passionate and data-driven individual</h2> -->
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <!-- <p><a class="btn btn-primary py-3 px-4">YouTube</a>  -->
+							<a href="https://github.com/jaggi0504" class="btn btn-white btn-outline-white py-3 px-4">My GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+	<section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12 heading-section ftco-animate text-center">
+					<h2 class="mb-4">About Me</h2>
+				</div>
+	
+				<!-- KPI Section -->
+				<div class="col-md-12">
+					<div class="kpi-dashboard" style="display: flex; justify-content: space-around; text-align: center; margin-bottom: 20px;">
+						<div class="kpi" style="background-color: #f9c74f; padding: 20px; border-radius: 20px; flex: 1; margin: 10px;">
+							<h3 style="font-size: 28px; font-weight: bold; color: white;">3+</h3>
+							<p style="font-size: 16px; font-weight: bold; color: white;">Years of Experience</p>
+						</div>
+						<div class="kpi" style="background-color: #f9c74f; padding: 20px; border-radius: 20px; flex: 1; margin: 10px;">
+							<h3 style="font-size: 28px; font-weight: bold; color: white;">100+</h3>
+							<p style="font-size: 16px; font-weight: bold; color: white;">Datasets Analyzed</p>
+						</div>
+						<div class="kpi" style="background-color: #f9c74f; padding: 20px; border-radius: 20px; flex: 1; margin: 10px;">
+							<h3 style="font-size: 28px; font-weight: bold; color: white;">15+</h3>
+							<p style="font-size: 16px; font-weight: bold; color: white;">Projects Completed</p>
+						</div>
+						<div class="kpi" style="background-color: #f9c74f; padding: 20px; border-radius: 20px; flex: 1; margin: 10px;">
+							<h3 style="font-size: 28px; font-weight: bold; color: white;">7,000+</h3>
+							<p style="font-size: 16px; font-weight: bold; color: white;">LinkedIn Impressions</p>
+						</div>
+					</div>
+				</div>
+	
+				<!-- Rest of the About Me section -->
+				<div class="row d-flex align-items-stretch">
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+										<div class="about-img">
+											<img src="images/GitHub.png" class="img-fluid rounded b-shadow-a" alt="">
+										</div>
+									</div>
+									<div class="col-sm-6 col-md-7">
+										<div class="about-info">
+											<p><span class="title-s d-flex">Name: </span> <span>Jagdeep Singh</span></p>
+											<p><span class="title-s d-flex">Pronoun: </span> <span>He/Him/His</span></p>
+											<p><span class="title-s d-flex">Status in Canada: </span> <span>Work-Permit</span></p>
+										</div>
+									</div>
+								</div>
+								<div class="skill-mf">
+									<p class="title-s">Workload Distribution</p>
+									<div class="chart-container" style="position: relative; width: 100%; height: 300px;">
+										<canvas id="timeAllocationChart"></canvas>
+									</div>
+								</div>
+								<!-- Include Chart.js -->
+								<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	
+								<!-- Pie Chart Script -->
+								<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+								<script>
+									const timeAllocationCtx = document.getElementById('timeAllocationChart').getContext('2d');
+								
+									// Custom plugin to display percentage labels
+									const percentageLabelPlugin = {
+										id: 'percentageLabel',
+										afterDatasetsDraw: function(chart) {
+											const ctx = chart.ctx;
+											ctx.restore();
+											const dataset = chart.data.datasets[0];
+											const total = dataset.data.reduce((acc, val) => acc + val, 0);
+											
+											chart.data.labels.forEach((label, index) => {
+												const value = dataset.data[index];
+												const percentage = Math.round((value / total) * 100); // Round to whole number
+								
+												const meta = chart.getDatasetMeta(0);
+												const slice = meta.data[index];
+												
+												if (slice) {
+													const position = slice.tooltipPosition();
+													ctx.fillStyle = '#fff'; // White color for text
+													ctx.font = 'bold 12px Arial'; // Bold font style
+													ctx.textAlign = 'center';
+													ctx.textBaseline = 'middle';
+													ctx.fillText(percentage + '%', position.x, position.y);
+												}
+											});
+								
+											ctx.save();
+										}
+									};
+								
+									const timeAllocationChart = new Chart(timeAllocationCtx, {
+										type: 'pie',
+										data: {
+											labels: ['Data Extraction', 'Data Preprocessing & EDA', 'Data Analysis', 'Dashboards & Reports', 'Training & Testing ML Models'],
+											datasets: [{
+												data: [10, 15, 25, 15, 35], // percentage of time spent on each activity
+												backgroundColor: ['#f9c74f', '#f9844a', '#f94144', '#90be6d', '#0f873b'],
+											}]
+										},
+										options: {
+											responsive: true,
+											maintainAspectRatio: false,
+											plugins: {
+												tooltip: {
+													callbacks: {
+														label: function(context) {
+															let label = context.label || '';
+															let value = context.raw;
+															return `${label}: ${value}%`;
+														}
+													}
+												}
+											}
+										},
+										plugins: [percentageLabelPlugin] // Register the custom plugin
+									});
+								</script>
+								
+							</div>
+						</div>
+					</div>
+	
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								<p>A passionate and data-driven individual with skills and experience in handling large datasets, preparing data for analysis, creating dashboards, and applying Machine Learning algorithms to predict results from the historical data. I'm an industrious and coachable individual with leadership qualities.</p>
+	
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Neuratwin Inc (Canada)</span> <span>Worked as an AI Developer and enhanced the query response time by 47%</span></li>
+									<li class="d-flex"><span>TCS (India)</span> <span>Worked as a Data Analyst and boosted the operational efficiency by 35%</span></li>
+								</ul>
+							</div>
+						</div>
+	
+						<div style="margin-bottom: 20px; position: relative; width: 100%; height: 300px;">
+							<canvas id="techStackChart"></canvas>
+						</div>
+						<script>
+							const techCtx = document.getElementById('techStackChart').getContext('2d');
+							const techStackChart = new Chart(techCtx, {
+								type: 'bar',
+								data: {
+									labels: ['Python', 'SQL', 'Excel', 'Statistics', 'Data Analysis', 'Machine Learning', 'Cloud Computing', 'BI Tools'],
+									datasets: [{
+										label: 'Years of Experience',
+										data: [5, 5, 5, 5, 3, 2, 3, 3],
+										backgroundColor: '#f9c74f',
+										borderWidth: 1
+									}]
+								},
+								options: {
+									scales: {
+										y: {
+											beginAtZero: true,
+											title: {
+												display: true,
+												// text: 'Number of Years',
+												color: 'white'
+											},
+											ticks: {
+												color: 'white'
+											}
+										},
+										x: {
+											title: {
+												display: true,
+												// text: 'Technical Stack',
+												color: 'white'
+											},
+											ticks: {
+												color: 'white',
+												autoSkip: false,
+												maxRotation: 45,
+												minRotation: 45
+											}
+										}
+									},
+									plugins: {
+										legend: {
+											labels: {
+												color: 'white'
+											}
+										}
+									}
+								}
+							});
+						</script>
+	
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p><a href="https://www.linkedin.com/in/jagdeepsingharora/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	  
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+            <h2 class="mb-4">Passion for continuous learning and collaboration</h2>
+            <p>As someone deeply passionate about the analytics domain, I am committed to staying abreast of the latest advancements in the field. Moreover, my experience collaborating with cross-functional teams underscores my ability to thrive in dynamic environments. </p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Jan 2024 - Apr 2024</span>
+						<h2>AI Developer (Co-op)</h2>
+						<span class="position">Neuratwin Inc.</span>
+						<!-- <p class="mt-4">Merkle, a leading CXM and media company with over 10K+ professionals globally. It's a part of Dentsu International.  -->
+							<ul> <br>
+								<li>Spearheaded the Personalized GPT project by facilitating the integration of personal documents, notes, and videos with LLMs
+									using Python and TensorFlow, yielding contextually aware answers and boosting user efficiency by 33%.</li>
+								<li>Refined semantic search functions by embedding data chunks and integrating vectors into vector databases, which enhanced query
+									response time by 47%.</li>
+								<li>Contributed to Flowlly, an AI agent for streamlining administrative workflows in construction projects, leading to a 47% reduction
+									in process time and enhancing operational efficiency.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">Oct 2021 - Aug 2022</span>
+						<h2>Data Analyst</h2>
+						<span class="position">Tata Consultancy Services</span>
+						<!-- <p class="mt-4">iQuanti is a data-driven digital marketing analytics and solutions company, helps top 100 global brands.  -->
+							<ul> <br>
+								<li>Utilized Excel and Python to conduct in-depth data analysis, identifying critical trends, patterns, and insights on Citibank’s
+									financial data that improved business processes and decision-making efficiency, accelerating operational efficiency by 35%.</li>
+								<li>Optimized relational database performance, improving query response speed by 27%, leading to enhanced data retrieval processes
+									and increased operational efficiency.</li>
+								<li>Mastered MS Excel, SAS, SQL, Python, Tableau, and Salesforce (CRM) through structured learning programs and certification on
+									TCS’s platform, enabling amplified data management and analysis, which increased task effectiveness by 31%.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+			</div>
+
+		<br>
+		<br>
+
+		<div class="row">
+			<h2 class="mb-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2022 - 2024</span>
+    					<h2>Post-Graduate Diploma</h2>
+    					<span class="position">Lambton College</span>
+    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">2017 - 2021</span>
+    					<h2>Bachelor of Technology (B.Tech)</h2>
+    					<span class="position">Guru Gobind Singh Indraprastha University</span>
+    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
+    				</div>
+				</div>
+    		</div>
+
+    		<div class="row justify-content-center mt-5">
+    			<!-- <div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div> -->
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on Python, SQL, MS Excel, Statistics, Machine Learning & BI Tools.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Jaggi0504/Fast-Food-Restaurant-Case-Study" class="block-20 zoom-effect" style="background-image: url('images/performance\ analyzer.avif');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Jaggi0504/Fast-Food-Restaurant-Case-Study">Analyzed Sales of a B2C Business</a></h3>
+                <p>Increased the Profit Margin from 20% to 33% with just a limited one-month data and decreased the operational cost</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/Jaggi0504/CoffeShopSales" class="block-20 zoom-effect" style="background-image: url('images/coffee\ shop.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Jaggi0504/CoffeShopSales">Coffee Shop Sales Analysis</a></h3>
+                <p>Leveraged Pivot Tables and created a dashboard in Microsoft Excel, and displayed KPIs and various charts</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://github.com/Jaggi0504/Telco-Customer-Churn" class="block-20 zoom-effect" style="background-image: url('images/customer\ churn.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/Jaggi0504/Telco-Customer-Churn">Customer Churn Prediction</a></h3>
+                <p>Analyzed a highly imbalanced dataset and applied ML algorithms to understand the cause of churn</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="121">0</strong>
+                <span>GitHub Repositories</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="17">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="21">0</strong>
+                <span>Awards</span>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="500">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div> -->
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<!-- <h2>More projects on my<span> GitHub  </span> </h2> -->
+						<!-- <div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4> -->
+						<br>
+						<!-- <p><a href="https://github.com/jagdeepsingharora" class="btn btn-primary py-3 px-5">GitHub</a></p> -->
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Please feel free to reach out to me</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Location</h3>
+	            <p>Canada</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Meeting</h3>
+	            <p><a href="https://calendly.com/jagdeep_singh">Calendly</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p>singh.jagdeep0504@gmail.com</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Want to connect?</h3>
+	            <p><a href="https://www.linkedin.com/in/jagdeepsingharora">LinkedIn</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<!-- <div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/uLaTShUKXraAvHJ77" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
+				</div>
+			</div> -->
+				<br>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
